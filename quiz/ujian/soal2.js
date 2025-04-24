@@ -12,19 +12,16 @@ function mengelompokkanAngka(arr) {
     let hasilGenap = []
     let hasilGanjil = []
     let hasilModulus3 = []
-    let arr2d = []
-    for (let i=0; i < arr.length ; i++){
-        if(arr[i] %2 == 0){
-            hasilGenap.push(arr[i])
-        }if(arr[i] %2 != 0){
-            hasilGanjil.push(arr[i])
-        }if(arr[i] %3 == 0){
-            hasilModulus3.push(arr[i])
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 3 === 0) {
+          hasilModulus3.push(arr[i]);
+        } else if (arr[i] % 2 === 0) {
+          hasilGenap.push(arr[i]);
+        } else {
+          hasilGanjil.push(arr[i]);
         }
-    }
-
-    arr2d.push(hasilGenap,hasilGanjil,hasilModulus3)
-    return arr2d
+      }
+    return [hasilGenap,hasilGanjil,hasilModulus3]
   }
   
   // TEST CASES
